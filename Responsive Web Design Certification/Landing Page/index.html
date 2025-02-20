@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="Product Logo"
+            id="header-img">
+        <nav id="nav-bar">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#video-section" class="nav-link">Video</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="features">
+            <h2>Our Features</h2>
+            <p><b>Introduction to Responsive Web Design –</b> Understanding what it is and why it's important.</p>
+            <p><b>HTML & CSS Basics –</b> Fundamental building blocks for structuring and styling web pages.</p>
+            <p><b>Media Queries –</b> Writing CSS rules that adjust styles based on screen sizes.</p>
+            <p><b>CSS Flexbox & Grid –</b> Learning modern layout techniques for responsive design.</p>
+            <p><b>Project-Based Learning –</b> Building real-world responsive websites and landing pages.</p>
+        </section>
+
+        <section id="video-section">
+            <h2>Free HTML & CSS Course for Beginners</h2>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/watch?v=a_iQb1lnAEQ"
+                frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="contact">
+            <h2>Stay Updated</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="submit" id="submit" value="Subscribe">
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById(this.getAttribute('href').substring(1)).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

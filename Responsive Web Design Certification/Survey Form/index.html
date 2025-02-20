@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" <head>
+<title>Survey Form App</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1 id="title">Survey Form Template</h1>
+    <p id="description">Template for future surveys</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name">Name <input required id="name" type="text"
+                    placeholder="Enter your name" /></label>
+            <label id="email-label" for="email">Email <input required id="email" type="email"
+                    placeholder="Enter your email" /></label>
+            <label id="number-label" for="number">Age <input type="number" placeholder="Age" id="number" min="18"
+                    max="90" /></label>
+        </fieldset>
+        <fieldset>
+            <label>How many electronic devices do you own?
+                <select id="dropdown">
+                    <option value="">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3+</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>What do you mainly use your devices for?</legend>
+            <label>
+                <input checked name="device-use" value="a" type="radio" />
+                <button type="button">Work</button>
+            </label>
+            <label>
+                <input name="device-use" value="b" type="radio" />
+                <button type="button">Leisure</button>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Which electronic devices do you own?</legend>
+            <label>Mobile phone<input value="phone" type="checkbox" /></label>
+            <label>Laptop<input value="laptop" type="checkbox" /></label>
+            <label>Tablet<input value="tablet" type="checkbox" /></label>
+            <label>Desktop<input value="desktop" type="checkbox" /></label>
+        </fieldset>
+        <fieldset>
+            <legend>How do you picture your future?</legend>
+            <textarea placeholder="I dream of being a pilot..."></textarea>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>

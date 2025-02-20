@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telephone Number Validator Project</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Telephone Number Validator</h1>
+    </header>
+
+    <main>
+        <section>
+            <label for="user-input">Enter your phone number:</label>
+            <input id="user-input" type="text" aria-label="Phone number input" placeholder="(555) 555-5555" />
+            <div>
+                <button id="check-btn" aria-label="Check phone number">Check</button>
+                <button id="clear-btn" aria-label="Clear results">Clear</button>
+            </div>
+        </section>
+
+        <section aria-live="polite" aria-atomic="true">
+            <p id="results-div" role="status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Phone number validation project - © 2024</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

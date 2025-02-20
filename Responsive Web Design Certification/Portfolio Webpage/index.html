@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="#welcome-section" class="nav-link">Welcome</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <section id="welcome-section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>My name is Sérgio and I'm learning how to code.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-tile">
+            <a href="https://github.com/SergioRibes/FreeCodeCamp" target="_blank">FreeCodeCamp Courses</a>
+        </div>
+        <div class="project-tile">
+            <a href="https://github.com/SergioRibes/spotify-ai-playlist-generator" target="_blank">Spotify AI Playlist
+                Generator</a>
+        </div>
+        <div class="project-tile">
+            <a href="https://github.com/SergioRibes/spotify-server-auth" target="_blank">Spotify Server Auth
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaboration or inquiries.</p>
+        <a id="profile-link" href="https://github.com/SergioRibes/" target="_blank">GitHub Profile</a>
+    </section>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById(this.getAttribute('href').substring(1)).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
